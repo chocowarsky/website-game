@@ -1,0 +1,48 @@
+.search {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: white;
+  transition: width 0.4s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  /* margin-right: 15px; */
+}
+
+.search.active {
+  width: 220px; /* saat aktif melebar */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding-left: 12px;
+}
+
+.search .input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  /* padding: 0; */
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.search.active .input {
+  opacity: 1; /* input fade-in saat aktif */
+}                           
+.search .btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 10px;
+  flex-shrink: 0;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.search.active .btn {
+  transform: rotate(90deg); /* animasi jadi X effect */
+}

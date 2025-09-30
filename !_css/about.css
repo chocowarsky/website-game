@@ -1,0 +1,96 @@
+/* Wrapper card center */
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* selalu full layar */
+  padding-top: 80px; /* biar ga ketiban navbar */
+  background: #f5f5f5;
+}
+
+/* Card utama */
+.about-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gambar */
+.about-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Judul & deskripsi */
+.about-title {
+  margin: 15px 0 10px;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.about-desc {
+  font-size: 1rem;
+  color: #555;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+/* Instagram link */
+.ig-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.ig-link:hover {
+  transform: scale(1.1);
+}
+
+.ig-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Animasi glowing IG */
+.ig-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.ig-link:hover {
+  transform: scale(1.1);
+}
+
+.ig-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+/* Keyframes glowing GLOWWINGFFGGG as long as infinite rawr */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px rgba(255,0,100,0.5),
+                0 0 10px rgba(255,0,150,0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255,0,100,0.8),
+                0 0 25px rgba(255,0,150,0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255,0,100,0.5),
+                0 0 10px rgba(255,0,150,0.5);
+  }
+}

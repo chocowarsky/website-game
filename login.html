@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Warsky</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="!_css/base.css">
+  <link rel="stylesheet" href="!_css/navbar.css">
+  <link rel="stylesheet" href="!_css/login.css"/>
+
+  <!-- JS -->
+  <script src="!_js/navbar_loader.js" defer></script>
+  <script src="!_js/login.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Login/Register -->
+  <div class="login-wrapper">
+      <div class="login-inner">
+        <!-- Left: Login -->
+        <div class="split left">
+          <h1>Welcome Back</h1>
+          <form class="login-form" novalidate>
+            <input class="form-input" type="email" placeholder="Email" required />
+            <input class="form-input" type="password" placeholder="Password" required />
+            <button class="form-btn" type="submit" aria-label="Sign in">Sign In</button>
+          </form>
+          <a href="index.html" class="back-home">← Back to Home</a>
+        </div>
+
+        <!-- Right: Register -->
+        <div class="split right">
+          <h1>Join Us</h1>
+          <form class="register-form" novalidate>
+            <input class="form-input" type="text" placeholder="Username" required />
+            <input class="form-input" type="email" placeholder="Email" required />
+            <input class="form-input" type="password" placeholder="Password" required />
+            <input class="form-input" type="password" placeholder="Confirm Password" required />
+            <button class="form-btn" type="submit" aria-label="Sign up">Sign Up</button>
+          </form>
+          <a href="index.html" class="back-home">← Back to Home</a>
+        </div>
+      </div>
+  </div>
+</body>
+</html>

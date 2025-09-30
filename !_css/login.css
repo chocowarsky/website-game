@@ -1,0 +1,165 @@
+:root{
+  --left-bg-color: rgba(87, 84, 236, 0.85);
+  --right-bg-color: rgba(43, 43, 43, 0.85);
+  --left-btn-hover-color: rgba(87, 84, 236, 1);
+  --right-btn-hover-color: rgba(28, 122, 28, 1);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+  --font-main: "Poppins", sans-serif;
+}
+
+/* INGET RAPIIN (BASE.CSS) */
+
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  background: #111;
+  color: #fff;
+}
+
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.login-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.split {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all var(--speed) ease-in-out;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.split.left {
+  background: url("../asset/image/fanny-aspirant.jpg") no-repeat center center/cover;
+}
+
+.split.left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45); /* overlay, buat biar background gak terlalu dominan */
+  z-index: 0;
+}
+
+.split.right {
+  background: url("../asset/image/kagura.png") no-repeat center center/cover;
+}
+
+.split.right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.split > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover layout widths */
+.hover-left .left { width: var(--hover-width); }
+.hover-left .right { width: var(--other-width); }
+.hover-right .right { width: var(--hover-width); }
+.hover-right .left { width: var(--other-width); }
+
+/* Forms */
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  max-width: 350px;
+}
+
+/* inputs/buttons use classes not IDs */
+.form-input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.form-input:focus {
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.form-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.split.left .form-btn {
+  background: #fff;
+  color: #000;
+}
+
+.split.left .form-btn:hover {
+  background: var(--left-btn-hover-color);
+  color: #fff;
+}
+
+.split.right .form-btn {
+  background: #fff;
+  color: #000;
+}
+
+.split.right .form-btn:hover {
+  background: var(--right-btn-hover-color);
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .login-inner { flex-direction: column; }
+  .split { width: 100%; height: 50%; }
+  h1 { font-size: 2rem; }
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.back-home:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.split > a{
+    color: white;
+    font-weight: bold;
+}
+
+.split > h1{
+    color: aquamarine;
+}

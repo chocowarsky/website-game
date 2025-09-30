@@ -1,0 +1,88 @@
+body{
+    background: url('/asset/image/kagura_water-lily.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.maps-wrapper {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.maps-title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    margin-top: 150px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.maps-desc {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 40px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.maps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.map-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+        background: rgba(178, 208, 247, 0.1); /* hitam transparan */
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(6px); /* glassmorphism */
+}
+
+.map-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.map-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.map-info {
+  padding: 18px 16px;
+  text-align: left;
+}
+
+.map-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+
+}
+
+.map-info p {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(red, 0, 0, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .maps-title {
+    font-size: 1.6rem;
+  }
+  .map-img {
+    height: 150px;
+  }
+}

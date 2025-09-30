@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="!_css/search.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="logo-wrap">
+      <h1 class="logo"><a href="/index.html">My Logo</a></h1>
+      <button id="music-toggle" aria-label="Toggle Music" class="music-toggle" data-music-state="paused">🎵</button>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="/index.html" class="nav-link" data-path="/">Home</a></li>
+      <li><a href="/hero.html" class="nav-link">Hero</a></li>
+      <li><a href="/map.html" class="nav-link">Maps</a></li>
+      <li><a href="/history.html" class="nav-link">History</a></li>
+      <!-- <li><a href="/testi.html" class="nav-link">Proof</a></li> -->
+      <li><a href="/faq.html" class="nav-link">FAQ</a></li>
+      <li><a href="/about.html" class="nav-link">About</a></li>
+      <li><a href="/login.html" class="nav-link">Login</a></li>
+      <li>
+        <div class="search-wrapper">
+          <div class="search">
+            <input type="text" class="input" placeholder="Search...">
+            <button class="btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- audio navbar only -->
+  <audio id="bg-music" src="asset/audio/tsuki_sayu_yoru.mp3" loop preload="auto" aria-hidden="true"></audio>
+</nav>
+
+<!-- <script>
+  const search = document.querySelector('.search');
+  const btn = document.querySelector('.btn');
+  const input = document.querySelector('.input');
+
+  btn.addEventListener('click', () => {
+    search.classList.toggle('active');
+    input.focus();
+  });
+</script> -->
