@@ -1,10 +1,9 @@
-.hero * {
+.hero{
   box-sizing: border-box;
 }
 
 .hero {
   background-color: #f0f0f0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,22 +15,23 @@
   margin: 20px;
   margin-top: 100px;
   color: #333;
+  text-shadow: 0 0 15px rgba(51, 51, 51, 0.9);
 }
 
-/* ===== BOX UNIVERSAL ===== */
+/* ===== BOX UNIVERSAL =========== */
 .hero .box {
-  color: white;
+  /* color: white; */
   background-color: #1e1e1e;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 75vh;
-  width: 85vw;
+  width: 90vw;
   margin: 20px;
   border-radius: 20px;
   box-shadow: 0 0px 10px #1e1e1e;
   transform: translateX(400%);
-  transition: transform 1s ease-out, box-shadow 0.3s ease-out;
+  transition: transform 1s ease-in-out, box-shadow 0.3s ease-out;
   position: relative;
   overflow: hidden;
 }
@@ -55,7 +55,7 @@
   justify-content: center;
 }
 
-/* Hero background */
+/* Hero backgroundds */
 .hero .box.dyrroth {
   background: url("../hero_assets/dyrroth_asset/dyrroth_image_gon_1.png") center/cover no-repeat;
 }
@@ -74,11 +74,12 @@
 
 /* ===== CONTAINER ===== */
 .hero .slider-box .container {
+    /* background-color: red; */
   display: flex;
   width: 95%;
   margin-bottom: 35px;
   justify-content: center;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 .hero .slider-box:hover .container {
   pointer-events: auto;
@@ -86,39 +87,36 @@
 
 /* ===== PANEL ===== */
 .hero .panel {
-  background-color: rgba(0, 0, 0, 0.2);
-  height: 20vh;
-  border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        height: 20vh;
+        margin: 10px;
+        padding: 20px;
   color: #fff;
   cursor: pointer;
-  flex: 0.4;
-  margin: 10px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
-  /* Animasi awal */
+    flex: 0.4;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  /* opacity: 1; */
   opacity: 0;
   transform: translateY(-150px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out, flex 700ms ease-in-out;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-out, flex 450ms ease-in-out;
   will-change: transform, opacity;
 }
 
-/* Saat hover box → panel masuk */
 .hero .slider-box:hover .panel {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Delay berurutan */
 .hero .slider-box:hover .panel:nth-child(1) { transition-delay: 0.1s; }
 .hero .slider-box:hover .panel:nth-child(2) { transition-delay: 0.2s; }
 .hero .slider-box:hover .panel:nth-child(3) { transition-delay: 0.3s; }
 .hero .slider-box:hover .panel:nth-child(4) { transition-delay: 0.4s; }
 
-/* ===== Isi panel ===== */
 .hero .panel img {
   width: 100px;
   height: 100px;
