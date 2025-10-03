@@ -45,26 +45,16 @@ function initNavScroll(nav) {
 }
 
 function setActiveLink() {
-  const links = document.querySelectorAll('.nav-link, .nav a');
-  const currentPath = window.location.pathname.replace(/\/$/, '') || '/index.html';
-
+  const links = document.querySelectorAll('.nav a');
   links.forEach(a => {
-    try {
-      const url = new URL(a.href, window.location.origin);
-      const linkPath = url.pathname.replace(/\/$/, '') || '/index.html';
-
-      if (linkPath === currentPath ||
-         (linkPath === '/index.html' && (currentPath === '' || currentPath === '/'))) {
-        a.classList.add('current');
-        a.setAttribute('aria-current', 'page');
-      } else {
-        a.classList.remove('current');
-        a.removeAttribute('aria-current');
-      }
-    } catch (e) {
+    if (a.getAttribute('href') === currentPath) {
+      a.classList.add('current');
+    } else {
+      a.classList.remove('current');
     }
   });
 }
+
 
 function initMusicControl() {
   const music = document.getElementById('bg-music');
@@ -100,7 +90,7 @@ function initMusicControl() {
   });
 }
 
-// Search toggle
+// Search toggleeeeeeeeeeeeeee
 function initSearchToggle() {
   const search = document.querySelector('.search');
   const btn = document.querySelector('.btn');
