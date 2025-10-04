@@ -24,9 +24,9 @@ function runNavbarInit() {
   if (!nav) return;
 
   initNavScroll(nav);
-  setActiveLink();
   initMusicControl();
   initSearchToggle();
+  setActiveLink();
 }
 
 //1. Nav scroll effect
